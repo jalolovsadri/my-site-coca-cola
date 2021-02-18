@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coca Cola</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/stlye.css">
+  <link rel="stylesheet" href="styles/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#!"><img src="images/colalogo2.png" class="logo" alt=""></a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li><a href="#!">Home</a></li>
+        <li><a href="#!">Menu</a></li>
+        <li><a href="#!">What's New</a></li>
+        <li><a href="#!">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>Taste the Feeling</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit asperiores quia quis repellat nulla suscipit
+          fuga reprehenderit assumenda harum ut, ipsa illum dicta quasi dolorem neque voluptatibus in, ab reiciendis
+          aliquam! Et commodi, nihil dolor excepturi voluptatem aliquam error quo, laboriosam dolorum possimus labore
+          molestiae necessitatibus iste sequi asperiores officia.</p>
+        <a href="#!">Learn More</a>
+      </div>
+
+      <div class="imgBox">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/cola1.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cola2.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cola1.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cola2.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cola1.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/cola2.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="messengers">
+        <i class="twitter-logo fab fa-twitter"></i>
+        <i class="instagram-logo fab fa-instagram"></i>
+        <i class="facebook-logo fab fa-facebook-f"></i>
+    </div>
+
+  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+    });
+
+    function toggleMenu(){
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>
