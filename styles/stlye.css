@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+
+section .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(70% at right -20%);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+}
+
+header .navigation li a {
+    display: inline-block;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.content .textBox h2 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+.content .textBox p {
+    color: white;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #e51e2a;
+    color: white;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+
+.content .textBox a:hover {
+    box-shadow: 1px 5px 15px red;
+}
+
+
+.twitter-logo {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    background: red;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.instagram-logo {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    background: red;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.facebook-logo {
+    color: white;
+    font-size: 25px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.twitter-logo:hover {
+    transform: translateY(-10px);
+}
+
+.instagram-logo:hover {
+    transform: translateY(-10px);
+}
+
+.facebook-logo:hover {
+    transform: translateY(-10px);
+}
+
+.messenger {
+    display: flex;
+}
+
+.messengers {
+    position: absolute;
+    display: flex;
+    top: 90%;
+}
+
+/* ==================================================================slider====================================================== */
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.content .imgBox {
+    width: 700px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content .imgBox img {
+    max-width: 150px;
+}
+
+
+.swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.swiper-slide .swiper-slide-shadow-left,
+.swiper-slide .swiper-slide-shadow-right{
+    background: none;
+}
+
+.toggle.active {
+    background: url(../images/close.png)  no-repeat center/cover;
+}
+
+@media(max-width:1330px){
+    .content .textBox h2 {
+        color: white;
+        font-size: 3em;
+        margin-bottom: 10px;
+        line-height: 1em;
+        font-weight: 700;
+    }
+    
+    .content .imgBox {
+        width: 500px;
+    }
+}
+
+
+@media(max-width:1130px){
+     .content .textBox p {
+        font-size: 12px;
+    }
+    
+    .content .textBox h2 {
+        font-size: 35px;
+    }
+    
+    
+    .content .imgBox {
+        width: 360px;
+    }
+}
+
+@media(max-width:880px){
+    .content .textBox h2 {
+        font-size: 25px;
+    }
+    
+    .content .textBox p {
+        font-size: 10px;
+    }
+    
+    .navigation a {
+        font-size: 15px;
+    }
+    
+    .content .textBox a {
+        font-size: 12px;
+    }
+    
+    
+    .messengers i {
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media(max-width:800px){
+    
+    .content .textBox h2 {
+        font-size: 23px;
+    }
+    
+    header {
+        padding: 40px;
+    }
+    section {
+        padding: 150px 40px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .textBox,
+    .content .imgBox {
+        max-width: 100%;
+    }
+    
+    .swiper-slide {
+        height: 300px;
+    }
+
+    header .navigation {
+        display: none;
+    }  
+    header .navigation.active {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e51e2a;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .navigation li a {
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300; 
+    }
+
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(../images/burgerlogo.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+        color: white;
+    }
+
+    .toggle .active {
+        position: fixed;
+        right: 40px;
+        background: url(../images/выйтиlogo.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
